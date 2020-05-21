@@ -1,0 +1,8 @@
+[package]
+name = "picopik2"
+version = "0.1.0"
+authors = ["Skyler <wgahnagl@protonmail.com>"]
+edition = "2018"
+
+[workspace]
+members = ["picopik-cli", "picopik-core", "picopik-api"]

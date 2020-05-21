@@ -1,0 +1,24 @@
+version: '2'
+services:
+  venue-core:
+    build: 
+        context: .
+        dockerfile: dev-dockerfile
+    volumes:
+      - "../:/venue"
+    command: "systemfd --no-pid -s 0.0.0.0:8080 -- cargo watch -w -s 'cargo run --bin venue-api'"
+    working_dir: "/venue"
+    ports:
+      - "8080:8080"
+  mysql:
+    image: mysql:5.7
+    restart: always
+    env_file:
+      - ../../../../.env      
+    ports:
+      - "3306:3306"
+    volumes:
+      - venue:/var/lib/mysql
+volumes:
+  venue:
+      
