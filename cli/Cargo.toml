@@ -1,5 +1,5 @@
 [package]
-name = "venue-cli"
+name = "cli"
 version = "0.1.0"
 edition = "2018"
 
@@ -7,5 +7,5 @@ edition = "2018"
 
 [dependencies]
 
-[dependencies.venue-core]
-path = "../venue-core"
+[dependencies.core]
+path = "../core"

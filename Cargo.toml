@@ -1,2 +1,2 @@
 [workspace]
-members = ["venue-cli", "venue-core", "venue-api"]
+members = ["cli", "core", "api", "frontend"]
