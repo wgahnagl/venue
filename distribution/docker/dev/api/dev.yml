@@ -1,12 +1,12 @@
 version: '2'
 services:
-  venue-core:
+  venue-api:
     build: 
         context: .
         dockerfile: dev-dockerfile
     volumes:
-      - "../:/venue"
-    command: "systemfd --no-pid -s 0.0.0.0:8080 -- cargo watch -w -s 'cargo run --bin venue-api'"
+      - "../../../../:/venue"
+    command: "systemfd --no-pid -s 0.0.0.0:8080 -- cargo watch -w -s 'cargo run --bin api'"
     working_dir: "/venue"
     ports:
       - "8080:8080"
